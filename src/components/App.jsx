@@ -15,11 +15,13 @@ class App extends React.Component {
   };
 	render() {
   	return (
-    	<div>
-    	  <div className="header">{this.props.title}</div>
-        <Form onSubmit={this.addNewProfile} />
-        <CardList profiles={this.state.profiles} />
-    	</div>
+      <div className="container">
+      <header className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          {this.props.title}
+      </header>
+      <Form onSubmit={this.addNewProfile}/>
+      <CardList profiles={this.state.profiles}/>
+  </div>
     );
   }	
 }
